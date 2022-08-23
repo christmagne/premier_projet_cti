@@ -13,7 +13,7 @@
           crossorigin="anonymous"/>
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
 
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
             body{
                 background:url('https://img.freepik.com/photos-gratuite/belle-journee-campus_329181-3042.jpg?size=626&ext=jpg&ga=GA1.2.1701650491.1653580749');
@@ -90,16 +90,6 @@
             <p class="mb-0">
                 <a href="{{ route('register') }}" class="text-center">Register a new membership</a>
             </p>
-
-            <div class="col-4">
-                        <a href="#" class="btn btn-default btn-flat float-right"
-                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            welcome
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div>    
         </div>
         <!-- /.login-card-body -->
     </div>
@@ -107,7 +97,7 @@
 </div>
 <!-- /.login-box -->
 
-<script src="{{ mix('js/app.js') }}"></script>
+<script src="{{ asset('js/app.js') }}"></script>
 
 </body>
 </html>

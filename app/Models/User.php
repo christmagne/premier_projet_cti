@@ -2,18 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class User extends Model implements Authenticatable
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class User extends Authenticatable
 {
 
-    public function getAuthIdentifierName() {}
-    public function getAuthIdentifier(){}
-    public function getAuthPassword(){}
-    public function getRememberToken(){}
-    public function setRememberToken($value){}
-    public function getRememberTokenName(){}
     public $table = 'users';
 
     public $fillable = [
@@ -33,11 +30,13 @@ class User extends Model implements Authenticatable
     ];
 
     public static $rules = [
+        'id'=> 'integer|unique',
         'name' => 'required|string',
         'email' => 'required|string',
         'email_verified_at' => 'nullable',
         'password' => 'required|string',
         'remember_token' => 'nullable|string',
+
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
     ];
