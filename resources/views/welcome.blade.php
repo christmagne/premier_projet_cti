@@ -27,8 +27,8 @@
     </head>
     <body >
     <div class="container-fluid p-5 bg-success text-white text-center">
-           <h1>cti</h1>
-           <p>BIENVENUS au cti VOTRE PLATEFORME DE COURS EN LIGNE</p> 
+           <h1>globelms</h1>
+           <p>BIENVENUS a globelms VOTRE PLATEFORME DE COURS EN LIGNE</p> 
     </div>
     <div class="container mt-5">
         <div class="row">

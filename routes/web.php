@@ -29,3 +29,5 @@ Auth::routes();
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('classes', App\Http\Controllers\ClasseController::class);
