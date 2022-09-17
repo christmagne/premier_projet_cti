@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Classe extends Model
 {
+    use hasfactory;
     public $table = 'classes';
 
     public $fillable = [
@@ -53,4 +54,10 @@ class Classe extends Model
     ];
 
     
+
+public function users()
+{
+    return $this ->belongstomany(user::class);
+}
+
 }

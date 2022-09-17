@@ -41,5 +41,10 @@ class User extends Authenticatable
         'updated_at' => 'nullable'
     ];
 
+    public function classe()
+{
+    return $this ->belongstomany(classe::class);
+}
+
     
 }
